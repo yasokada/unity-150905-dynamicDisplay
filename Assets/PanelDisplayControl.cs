@@ -2,6 +2,11 @@
 using System.Collections;
 using UnityEngine.UI;
 
+/*
+ * v0.1 2015/09/05
+ *   - show/hide panels
+ */
+
 public class PanelDisplayControl : MonoBehaviour {
 
 	public GameObject PageSelect;
@@ -16,6 +21,10 @@ public class PanelDisplayControl : MonoBehaviour {
 		foreach (Transform child in PanelGroup.transform) {
 			orgSize[idx].x = child.gameObject.GetComponent<RectTransform>().rect.width;
 			orgSize[idx].y = child.gameObject.GetComponent<RectTransform>().rect.height;
+
+			bool isOn = getIsOn (idx + 1);
+			DisplayPanel (idx + 1, isOn);
+
 			idx++;
 		}
 
