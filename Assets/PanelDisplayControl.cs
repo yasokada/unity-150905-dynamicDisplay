@@ -5,8 +5,8 @@ using UnityEngine.UI;
 public class PanelDisplayControl : MonoBehaviour {
 
 	public GameObject PageSelect;
-	
-	public void ToggleValueChanged(int idx_st1) {
+
+	bool getIsOn(int idx_st1) {
 		Toggle selected = null;
 		string name;
 		foreach (Transform child in PageSelect.transform) {
@@ -16,8 +16,13 @@ public class PanelDisplayControl : MonoBehaviour {
 				break;
 			}
 		}
+		return selected.isOn;
+	}
 
-		Debug.Log(idx_st1.ToString() + " is " + selected.isOn);
+	public void ToggleValueChanged(int idx_st1) {
+		bool isOn = getIsOn (idx_st1);
+
+		Debug.Log (isOn.ToString ());
 	}
 
 }
