@@ -5,6 +5,21 @@ using UnityEngine.UI;
 public class PanelDisplayControl : MonoBehaviour {
 
 	public GameObject PageSelect;
+	public GameObject PanelGroup;
+
+	private Vector2[] orgSize;
+
+	void Start() {
+		orgSize = new Vector2[4];
+		int idx=0;
+
+		foreach (Transform child in PanelGroup.transform) {
+			orgSize[idx].x = child.gameObject.GetComponent<RectTransform>().rect.width;
+			orgSize[idx].y = child.gameObject.GetComponent<RectTransform>().rect.height;
+			idx++;
+		}
+
+	}
 
 	bool getIsOn(int idx_st1) {
 		Toggle selected = null;
@@ -29,9 +44,8 @@ public class PanelDisplayControl : MonoBehaviour {
 		RectTransform rect = panel.GetComponent (typeof(RectTransform)) as RectTransform;
 		Vector2 size = rect.sizeDelta;
 		if (doShow) {
-			// TODO: how to get original size (x,y)
-			size.x = 50;
-			size.y = 50;
+			size.x = orgSize[idx_st1 - 1].x;
+			size.y = orgSize[idx_st1 - 1].y;
 		} else {
 			size.x = 1;
 			size.y = 1;
