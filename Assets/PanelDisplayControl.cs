@@ -56,8 +56,8 @@ public class PanelDisplayControl : MonoBehaviour {
 			size.x = orgSize[idx_st1 - 1].x;
 			size.y = orgSize[idx_st1 - 1].y;
 		} else {
-			size.x = 1;
-			size.y = 1;
+			size.x = 0;
+			size.y = 0;
 		}
 		rect.sizeDelta = size;
 	}
