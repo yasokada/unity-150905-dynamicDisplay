@@ -19,9 +19,29 @@ public class PanelDisplayControl : MonoBehaviour {
 		return selected.isOn;
 	}
 
+	void DisplayPanel(int idx_st1, bool doShow)
+	{
+		GameObject panel = GameObject.Find ("Panel" + idx_st1.ToString ());
+		if (panel == null) {
+			return;
+		}
+
+		RectTransform rect = panel.GetComponent (typeof(RectTransform)) as RectTransform;
+		Vector2 size = rect.sizeDelta;
+		if (doShow) {
+			// TODO: how to get original size (x,y)
+			size.x = 50;
+			size.y = 50;
+		} else {
+			size.x = 1;
+			size.y = 1;
+		}
+		rect.sizeDelta = size;
+	}
+
 	public void ToggleValueChanged(int idx_st1) {
 		bool isOn = getIsOn (idx_st1);
-
+		DisplayPanel (idx_st1, isOn);
 		Debug.Log (isOn.ToString ());
 	}
 
