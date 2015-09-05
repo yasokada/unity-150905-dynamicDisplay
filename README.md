@@ -2,6 +2,7 @@
 
 - implemented on Unity 5.1.2-f1 on MacOS X 10.8.5
 - can change window-display based on the selected radio button (P1..P4)
+- settings in all the window can be read while they are hidden (by using the mask feature of UI > Panel)
 
 ![Page1](https://qiita-image-store.s3.amazonaws.com/0/32870/63152df7-75e3-c23c-9e8f-e18837954700.jpeg)
 ![Page2](https://qiita-image-store.s3.amazonaws.com/0/32870/93b7dedc-6ad2-bc94-f43f-1869d130e067.jpeg)
