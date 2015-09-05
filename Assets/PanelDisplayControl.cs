@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 
 /*
+ * v0.2 2015/09/06
+ *   - add sample UI components in each panel
  * v0.1 2015/09/05
  *   - show/hide panels
  */
