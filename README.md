@@ -4,7 +4,7 @@
 - can change window-display based on the selected radio button (P1..P4)
 - settings in all the window can be read while they are hidden (by using the mask feature of UI > Panel)
 
-![Page1](https://qiita-image-store.s3.amazonaws.com/0/32870/63152df7-75e3-c23c-9e8f-e18837954700.jpeg)
-![Page2](https://qiita-image-store.s3.amazonaws.com/0/32870/93b7dedc-6ad2-bc94-f43f-1869d130e067.jpeg)
-![Page3](https://qiita-image-store.s3.amazonaws.com/0/32870/b633daba-1c73-8e4f-2be0-f7ddb80fcd81.jpeg)
-![Page4](https://qiita-image-store.s3.amazonaws.com/0/32870/3b454cad-1683-50e2-5ac8-284e24baa986.jpeg)
+![Page1](https://qiita-image-store.s3.amazonaws.com/0/32870/bb98c590-75c9-d494-b065-4754669e2553.jpeg)
+![Page2](https://qiita-image-store.s3.amazonaws.com/0/32870/2ddcadc4-044e-1433-3e7c-77a5e5371108.jpeg)
+![Page3](https://qiita-image-store.s3.amazonaws.com/0/32870/e5657714-91df-0b87-0e67-382e9a80596d.jpeg)
+![Page4](https://qiita-image-store.s3.amazonaws.com/0/32870/14f6bf66-08c0-2c1f-2c65-ee432957f26c.jpeg)
