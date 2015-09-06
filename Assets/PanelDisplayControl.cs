@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 
 /*
+ * v0.3 2015/09/06
+ *   - use Tag for Panel to find target panels, instead of panel name
  * v0.2 2015/09/06
  *   - add sample UI components in each panel
  * v0.1 2015/09/05
@@ -47,21 +49,24 @@ public class PanelDisplayControl : MonoBehaviour {
 
 	void DisplayPanel(int idx_st1, bool doShow)
 	{
-		GameObject panel = GameObject.Find ("Panel" + idx_st1.ToString ());
-		if (panel == null) {
+		GameObject [] panels = GameObject.FindGameObjectsWithTag ("TagP" + idx_st1.ToString ());
+
+		if (panels == null) {
 			return;
 		}
 
-		RectTransform rect = panel.GetComponent (typeof(RectTransform)) as RectTransform;
-		Vector2 size = rect.sizeDelta;
-		if (doShow) {
-			size.x = orgSize[idx_st1 - 1].x;
-			size.y = orgSize[idx_st1 - 1].y;
-		} else {
-			size.x = 0;
-			size.y = 0;
+		foreach (GameObject panel in panels) {
+			RectTransform rect = panel.GetComponent (typeof(RectTransform)) as RectTransform;
+			Vector2 size = rect.sizeDelta;
+			if (doShow) {
+				size.x = orgSize [idx_st1 - 1].x;
+				size.y = orgSize [idx_st1 - 1].y;
+			} else {
+				size.x = 0;
+				size.y = 0;
+			}
+			rect.sizeDelta = size;
 		}
-		rect.sizeDelta = size;
 	}
 
 	public void ToggleValueChanged(int idx_st1) {
